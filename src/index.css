@@ -24,13 +24,7 @@ code {
     monospace;
 }
 
-#cursor {
-  display: inline-block;
-  width: 1.5px;
-  background-color: #000000;
-  margin-left: 0px;
-  animation: cursor-effect 1s infinite;
-}
+
 
 @keyframes cursor-effect {
   0% {

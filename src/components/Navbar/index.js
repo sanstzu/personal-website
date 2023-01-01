@@ -4,17 +4,30 @@ import DynText  from './components/DynText';
 export default function UpdatesCard(props) {
     const aliases = ["Clayton Fernalo", "sansmomento", "one and only"];
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg mb-3">
             <div className="container-fluid">
-                <div>
-                    <a className="navbar-brand fw-bold fs-3">Sanstzu's Crib</a> 
-                    <br/>
-                    <span className="fs-6 fw-lighter">a.k.a. </span>                    
-                    <DynText className="fs-6 fw-lighter" aliases={aliases} duration={5000} offset_time={2000} animation_time={250} />
-                </div>
-                
+                <a className="navbar-brand m-0" id="navbar-brand">
+                    <p className="fw-bold fs-6 text-primary m-0">Sanstzu's Crib</p> 
+                    <div className="fs-6 fw-lighter text-primary">
+                        <span>a.k.a. </span>                    
+                        <DynText aliases={aliases} duration={5000} offset_time={2000} animation_time={250} />
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav flex">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active text-primary" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active text-primary" aria-current="page" href="#">About Me</a>
+                    </li>
+                </ul>
             </div>
-            <button type="button" class="btn btn-success">Success</button>
+            </div>
+            
         </nav>
         
     );

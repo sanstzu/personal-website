@@ -1,5 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css'
+import 'jquery/dist/jquery.min.js'
+import 'bootstrap/dist/js/bootstrap.min.js'
+
+import './scss/custom.scss'
 import * as React from 'react';
 import ReactDOM from 'react-dom/client';
 import Navbar from './components/Navbar/index.js'
@@ -9,7 +12,7 @@ function App() {
     document.title = "Sanstzu's Crib"
   },[]);
   return (
-    <div>
+    <div id="subroot">
       <Navbar />
       <Body />
     </div>
