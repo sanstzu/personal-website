@@ -9,7 +9,7 @@ export default function Body(props) {
          <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/moai_1f5ff.png" className="bi flex-shrinkn-0 me-2 emoji" />
             Still, this website is under construction 
          </div>
-         <Card title="About me" img="venti.png" height="400px" objectPosition='60% 30%' objectPositionMd=''>
+         <Card title="About me" img="venti.jpg" height="400px" objectPosition='60% 30%' objectPositionMd=''>
             <h1 className="card-title">こんにちは!</h1>
             <p className="card-text">
                {about_me_text}
