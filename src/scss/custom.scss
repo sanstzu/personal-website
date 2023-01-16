@@ -5,7 +5,7 @@
 @import "./node_modules/bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
-$dark:   #404258;
+$dark:   rgb(19,30,42);
 $primary: #c6deff;
 
 // 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
@@ -33,10 +33,11 @@ $primary: #c6deff;
 // 8. Add additional custom code here
 
 #root  {
+    min-height: 100vh;
     background: linear-gradient(-45deg, rgba(39,68,56,1) 0%, rgba(53,53,113,1) 50%, rgba(42,0,70,1) 100%);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-	height: 100vh;
+	
     @keyframes gradient {
         0% {
             background-position: 0% 50%;
@@ -50,15 +51,43 @@ $primary: #c6deff;
     }
 }
 
+.card-image-container > img {
+    flex-shrink: 0;
+}
+.card-image-container {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
 img.emoji {
     height: $h6-font-size *1.25;
     position: relative;
     bottom: 2px;
+   
 }
 
 .navbar {
     background-color: rgba($dark,0.5);
     backdrop-filter: blur(10px);
+
+}
+.navbar-brand, .navbar-brand:hover ,.navbar-nav .nav-link.active {
+    color: #ffffff;
+}
+
+.card {
+    background-color: rgba(19,30,42,0.5);
+    border: 1px;
+    color: $primary;
+    width: 100%;
+}
+
+.card-text{
+    white-space: pre-line;
 }
 
 #navbar-brand {
@@ -90,3 +119,26 @@ img.emoji {
         background: #00000000;
     }
   }
+
+// Example: Hide starting at `min-width: 0`, and then show at the `sm` breakpoint
+.card-image {
+    height: 100%;
+    width:100%;
+}
+
+
+
+@include media-breakpoint-up(md) {
+    .card-image {
+        height:100%;
+        width:auto;
+    }
+    .card-image-container {
+        height: auto;
+    }
+}
+@media (min-width: 1080px) { 
+    .card {
+        width: 1080px;
+    }
+}
