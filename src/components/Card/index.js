@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 export default function Card(props){
+    
     const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
     var bs_md = 768;
 
@@ -10,36 +11,31 @@ export default function Card(props){
           });
         
     },[])
-
-    var img_html  = (
-        <img 
-            src={props.img} 
-            class="rounded-start card-image" 
-            alt="image"
-            style={{
-                objectFit:'cover',
-                objectPosition: windowWidth < bs_md ? props.objectPosition : props.objectPositionMd,
-            }} 
-        />
-    );
-
-    var img_class = "col-md-4 col-xl-3 col-xxl-3";
-    var text_class = "col-md-8 col-xl-9 col-xxl-9";
+    
+    var img_html
+    var img_class = "col-md-3 col-xl-2 col-xxl-2";
+    var text_class = "col-md-9 col-xl-10 col-xxl-10";
     if(!props.img){
         img_html = '';
         img_class = '';
         text_class = 'col-12';
     }
+
     return (
     <div className="card semi-transparent overflow-hidden">
         <div className="row g-0">
             <div className={`${img_class}`}>
-                <div className='card-image-container'
+                <div 
+                    className='card-image-container h-100'
                     style={{
-                        height: windowWidth < bs_md ? "125px" : props.height,
+                        backgroundImage: `url(${props.img})`,
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat',
+                        minHeight: '100px',
+                        backgroundPosition: windowWidth < bs_md ? props.objectPosition : props.objectPositionMd, 
                     }}
                 >
-                    {img_html}
+                    
                 </div>
             </div>
             <div className={`${text_class}`}>

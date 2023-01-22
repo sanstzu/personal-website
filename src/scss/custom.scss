@@ -126,7 +126,17 @@ img.emoji {
     width:100%;
 }
 
+// Main body
 
+
+@media (min-width: 1080px){
+    .main-body {
+        width: 1080px;
+    }
+}
+
+
+// Card component
 
 @include media-breakpoint-up(md) {
     .card-image {
@@ -135,10 +145,5 @@ img.emoji {
     }
     .card-image-container {
         height: auto;
-    }
-}
-@media (min-width: 1080px) { 
-    .card {
-        width: 1080px;
     }
 }
