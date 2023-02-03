@@ -6,15 +6,11 @@ export default function Body(props) {
    return (
       <div className="w-100 d-flex flex-column align-items-center">
          <div className="main-body">
-            <div class="alert alert-primary container-sm w-100" role="alert">
-            <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/moai_1f5ff.png" className="bi flex-shrinkn-0 me-2 emoji" />
-               Still, this website is under construction 
-            </div>
             <Card title="About me" img="venti.jpg" height="400px" objectPosition='60% 30%' objectPositionMd='50% 25%'>
                <h1 className="card-title">こんにちは!</h1>
                <p className="card-text">
                   {about_me_text}
-                  <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/flag-singapore_1f1f8-1f1ec.png" className="bi flex-shrinkn-0 me-2 emoji" />
+                  <img src="https://em-content.zobj.net/thumbs/120/apple/325/flag-singapore_1f1f8-1f1ec.png"  className="bi flex-shrink-0 me-2 emoji"/>
                </p>
                <div className="mt-3">
                   <h3>Social Media</h3>
