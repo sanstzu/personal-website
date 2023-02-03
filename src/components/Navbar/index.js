@@ -5,8 +5,7 @@ export default function UpdatesCard(props) {
     const aliases = ["Clayton Fernalo", "sansmomento", "one and only"];
 
     const navbar_list = [
-        {text: "Home", href:"/"},
-        {text: "Blog", href:"/blog"}
+        {text: "Home", href:"#"},
     ]
     return (
         <nav className="navbar navbar-expand-lg mb-3 semi-transparent">
