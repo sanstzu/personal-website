@@ -9,19 +9,20 @@ import Navbar from './components/Navbar';
 import Body from './components/Body';
 import Blog from './components/Blog';
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, HashRouter, Route } from 'react-router-dom';
 function App() {
   React.useEffect(() => {
     document.title = "Sanstzu's Crib"
   },[]);
   return (
     <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Body />} />
-        <Route path='blog' element={<Blog />} />
-      </Routes>
-      
+      <HashRouter basename="/">
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Body />} />
+          <Route path='blog' element={<Blog />} />
+        </Routes>
+      </HashRouter>
     </BrowserRouter>
   );
 }
