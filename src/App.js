@@ -15,7 +15,7 @@ function App() {
     document.title = "Sanstzu's Crib"
   },[]);
   return (
-    <HashRouter basename="/">
+    <HashRouter basename="/personal-website">
       <Navbar />
       <Routes>
         <Route path='/' element={<Body />} />
