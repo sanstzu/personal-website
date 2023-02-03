@@ -15,15 +15,13 @@ function App() {
     document.title = "Sanstzu's Crib"
   },[]);
   return (
-    <BrowserRouter>
-      <HashRouter basename="/">
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Body />} />
-          <Route path='blog' element={<Blog />} />
-        </Routes>
-      </HashRouter>
-    </BrowserRouter>
+    <HashRouter basename="/">
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Body />} />
+        <Route path='blog' element={<Blog />} />
+      </Routes>
+    </HashRouter>
   );
 }
 
