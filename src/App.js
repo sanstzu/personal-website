@@ -5,6 +5,7 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import './scss/custom.scss'
 import * as React from 'react';
 import ReactDOM from 'react-dom/client';
+
 import Navbar from './components/Navbar';
 import Body from './components/Body';
 import Blog from './components/Blog';
@@ -15,6 +16,7 @@ function App() {
     document.title = "Sanstzu's Crib"
   },[]);
   return (
+
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -22,6 +24,7 @@ function App() {
         <Route path='blog' element={<Blog />} />
       </Routes>
     </BrowserRouter>
+
   );
 }
 
