@@ -5,17 +5,27 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 import './scss/custom.scss'
 import * as React from 'react';
 import ReactDOM from 'react-dom/client';
-import Navbar from './components/Navbar/index.js'
-import Body from './components/Body/index.js'
+
+import Navbar from './components/Navbar';
+import Body from './components/Body';
+import Blog from './components/Blog';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 function App() {
   React.useEffect(() => {
     document.title = "Sanstzu's Crib"
   },[]);
   return (
-    <div id="subroot">
+
+    <BrowserRouter>
       <Navbar />
-      <Body />
-    </div>
+      <Routes>
+        <Route path='/' element={<Body />} />
+        <Route path='blog' element={<Blog />} />
+      </Routes>
+    </BrowserRouter>
+
   );
 }
 
