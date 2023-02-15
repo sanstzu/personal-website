@@ -132,9 +132,7 @@ img.emoji {
   }
 
 // Main page:
-.landing {
-    height: 100vh;
-}
+
 
 // Example: Hide starting at `min-width: 0`, and then show at the `sm` breakpoint
 .card-image {
@@ -143,6 +141,15 @@ img.emoji {
 }
 
 // Main body
+
+.main-body:nth-child(1) > :not(.landing) {
+    margin-top:6rem;
+}
+
+.landing {
+
+    height: 100vh;
+}
 
 @media (min-width: 1080px){
     .main-body {
